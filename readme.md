@@ -15,7 +15,7 @@ Contact: hypha.ros@gmail.com
 Developer:   
 * HaoChih, LIN  
 
-Date: 2018/07/11  
+Date: 2018/07/27  
 License: Apache 2.0  
 
 ## Features
@@ -42,15 +42,22 @@ License: Apache 2.0
 * Ackermann Based 1/20 car chassis  
 Total Cost: < 300 USD  
 
+## Document  
+ROS Summer School in China 2018 Slides:  
+https://goo.gl/RpVBDH  
+
 ## Software
 ### Odroid Image
 Image file for Odroid XU4.(with SD card >=16G, password: hypharos)  
-will be released soon!  
+Link: https://goo.gl/87vrNk   
 (if your SD card is around 13GB, it's OK to force Win32DiskImager to write the file!)   
+The default ethernet IP address is 10.0.0.1  
 
 ### STM32 (MCU)
-Source codes:  
-will be released soon!
+Source codes: https://goo.gl/edX8Gm   
+[WARNING!]  
+Since the original STM32 codes came from third-paries,   
+currently, the quality of codes are not guaranteed by us.  
 
 ### Install from source (16.04) 
 1. Install ROS Kinetic (Desktop-Full) (http://wiki.ros.org/kinetic/Installation/Ubuntu)  
