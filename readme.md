@@ -42,7 +42,7 @@ License: Apache 2.0
 * STM32(F103) MCU (with OLED display)  
 * Diff Motor with A/B encoder(res: 340)  
 * Ackermann Based 1/20 car chassis  
-(Ref: https://item.taobao.com/item.htm?spm=a312a.7700824.w4004-15726392027.68.79503c88Rqwzb9&id=554619475840)
+(Ref: https://item.taobao.com/item.htm?spm=a312a.7700824.w4004-15726392027.68.79503c88Rqwzb9&id=554619475840)   
 Total Cost: < 300 USD  
 
 ## Document  
