@@ -65,13 +65,13 @@ currently, the quality of codes are not guaranteed by us.
 ### Install from source (16.04) 
 1. Install ROS Kinetic (Desktop-Full) (http://wiki.ros.org/kinetic/Installation/Ubuntu)  
 2. Install dependencies:  
-$ sudo apt-get install remmina synaptic gimp git ros-kinetic-navigation* ros-kinetic-gmapping ros-kinetic-hector-slam ros-kinetic-mrpt-icp-slam-2d ros-kinetic-slam-karto -y  
+$ sudo apt-get install remmina synaptic gimp git ros-kinetic-navigation* ros-kinetic-gmapping ros-kinetic-hector-slam ros-kinetic-mrpt-icp-slam-2d ros-kinetic-slam-karto ros-kinetic-ackermann-msgs -y  
 3. Install Ipopt: Please refer the tutorial in "document/ipopt_install".  
 4. create your own catkin_ws   
 (http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment#Create_a_ROS_Workspace)  
 $ cd catkin_ws/src  
 $ git clone https://github.com/EAIBOT/ydlidar  
-$ git clone https://github.com/Hypha-ROS/hypharos-minicar   
+$ git clone https://github.com/Hypha-ROS/hypharos_minicar   
 $ cd ..  
 $ catkin_make  
 
