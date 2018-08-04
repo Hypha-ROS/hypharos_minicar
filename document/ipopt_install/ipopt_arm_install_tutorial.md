@@ -1,8 +1,10 @@
 # How to install Ipopt on arm environment  
 
-## Get ipopt source code  
-$ sudo apt-get install gfortran  
-Download Ipopt-3.12.1.tgz from https://www.coin-or.org/download/source/Ipopt/  
+## Inatall CPPAD & Fortran   
+$ sudo apt-get install cppad gfortran  
+
+## Get ipopt source code   
+Download Ipopt-3.12.8.tgz from https://www.coin-or.org/download/source/Ipopt/  
 Untar the package and cd into the "Ipopt-3.12.8" folder  
 
 ## Step by step   
@@ -26,10 +28,8 @@ $ make install
 $ cd CUSTOM_PATH/Ipopt-3.12.8/build  
 $ sudo cp -a include/* /usr/include/.  
 $ sudo cp -a lib/* /usr/lib/.  
-
-## Inatall CPPAD  
-$ sudo apt-get install cppad gfortran  
   
+## Trouble Shooting
 If something wrong like: "redefinition of ‘bool CppAD::is_pod()"  
 Modify the file:  
 $ sudo gedit /usr/include/cppad/configure.hpp   
