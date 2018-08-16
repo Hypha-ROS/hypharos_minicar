@@ -15,7 +15,7 @@ Contact: hypha.ros@gmail.com
 Developer:   
 * HaoChih, LIN  
 
-Date: 2018/07/27  
+Date: 2018/08/16  
 License: Apache 2.0  
 
 ## Features

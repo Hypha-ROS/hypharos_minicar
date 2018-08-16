@@ -4,6 +4,9 @@ project(hypharos_minicar)
 ## Compile as C++11, supported in ROS Kinetic and newer
 add_definitions(-std=c++11 -O3)
 
+# options for build configuration
+option(BUILD_EXAMPLE "Whether or not building the CppAD & Ipopt example" OFF) 
+
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
@@ -47,3 +50,14 @@ TARGET_LINK_LIBRARIES(MPC_Node ipopt ${catkin_LIBRARIES} )
 # Pure Pursuit Node
 add_executable(Pure_Pursuit src/Pure_Pursuit.cpp)
 target_link_libraries(Pure_Pursuit ${catkin_LIBRARIES})
+
+#############
+## Example ##
+#############
+if(BUILD_EXAMPLE)
+    ADD_EXECUTABLE( CppAD_started example/CppAD_started.cpp )
+    TARGET_LINK_LIBRARIES(CppAD_started)
+    
+    ADD_EXECUTABLE( CppAD_Ipopt example/CppAD_Ipopt.cpp )
+    TARGET_LINK_LIBRARIES(CppAD_Ipopt ipopt)
+endif(BUILD_EXAMPLE)

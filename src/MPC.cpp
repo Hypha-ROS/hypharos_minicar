@@ -98,19 +98,18 @@ class FG_eval
             //cout << "\n!! FG_eval Obj parameters updated !! " << _mpc_steps << endl; 
         }
 
-        typedef CPPAD_TESTVECTOR(AD<double>) ADvector;
-        
+        // MPC implementation (cost func & constraints)
+        typedef CPPAD_TESTVECTOR(AD<double>) ADvector; 
+        // fg: function that evaluates the objective and constraints using the syntax       
         void operator()(ADvector& fg, const ADvector& vars) 
         {
-            // MPC implementation
-            // fg a vector of constraints, x is a vector of constraints.
-            // NOTE: You'll probably go back and forth between this function and
-            // the Solver function below.
+            
+            // fg[0] for cost function
             fg[0] = 0;
             for (int i = 0; i < _mpc_steps; i++) {
-              fg[0] += _w_cte * CppAD::pow(vars[_cte_start + i] - _ref_cte, 2);
-              fg[0] += _w_epsi * CppAD::pow(vars[_epsi_start + i] - _ref_epsi, 2);
-              fg[0] += _w_vel * CppAD::pow(vars[_v_start + i] - _ref_vel, 2);
+              fg[0] += _w_cte * CppAD::pow(vars[_cte_start + i] - _ref_cte, 2); // cross deviation error
+              fg[0] += _w_epsi * CppAD::pow(vars[_epsi_start + i] - _ref_epsi, 2); // heading error
+              fg[0] += _w_vel * CppAD::pow(vars[_v_start + i] - _ref_vel, 2); // speed error
             }
 
             // Minimize the use of actuators.
@@ -125,6 +124,7 @@ class FG_eval
               fg[0] += _w_accel_d * CppAD::pow(vars[_a_start + i + 1] - vars[_a_start + i], 2);
             }
             
+            // fg[x] for constraints
             // Initial constraints
             fg[1 + _x_start] = vars[_x_start];
             fg[1 + _y_start] = vars[_y_start];
@@ -133,7 +133,7 @@ class FG_eval
             fg[1 + _cte_start] = vars[_cte_start];
             fg[1 + _epsi_start] = vars[_epsi_start];
 
-            // The rest of the constraints
+            // Add system dynamic model constraint
             for (int i = 0; i < _mpc_steps - 1; i++)
             {
                 // The state at time t+1 .
