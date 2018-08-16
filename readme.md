@@ -50,9 +50,9 @@ ROS Summer School in China 2018 Slides:
 https://goo.gl/RpVBDH  
 
 ## Software
-### VirtualBox Image ###
-OVA image file (Kinetic, password: hypharos, 20180816)
-Link: https://drive.google.com/open?id=1uRvXGakvQrbynmPHX_KIFJxPm8o6MWPb
+### VirtualBox Image ###  
+OVA image file (Kinetic, password: hypharos, 20180816)  
+Link: https://drive.google.com/open?id=1uRvXGakvQrbynmPHX_KIFJxPm8o6MWPb  
 
 ### Odroid Image
 Image file for Odroid XU4.(with SD card >=16G, password: hypharos)  
