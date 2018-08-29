@@ -46,6 +46,8 @@ License: Apache 2.0
 Total Cost: < 300 USD  
 
 ## Document  
+HyphaROS MPC MiniCar 1-Day Workshop:  
+https://drive.google.com/open?id=1yX0aeA4spf_szpxXFpIlH0EQKIgiwJx7  
 ROS Summer School in China 2018 Slides:  
 https://goo.gl/RpVBDH  
 
