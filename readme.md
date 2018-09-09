@@ -84,8 +84,9 @@ $ catkin_make
 ## Operation
 ### Simulation
 $ roslaunch hypharos_minicar HyphaROS_Simulation_Stage.launch  
-The default controller is mpc, you can switch to pure-pursuit or DWA through param: "controller"  
-
+The default controller is mpc, you can switch to pure-pursuit or DWA through param: "controller"    
+![alt text](https://github.com/Hypha-ROS/hypharos_minicar/blob/master/document/photo/HyphaROS_MPC_MiniCar_Simulation.jpg)    
+  
 ### Ethernet Connection
 The default static eth IP on Odroid image is 10.0.0.1, hence, to connect to your Odroid through cable, please set your host IP as 10.0.0.X  
 Notice: for the first bootup, you have to update Odroid MAC address through HDMI Dispaly!  
