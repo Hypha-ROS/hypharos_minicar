@@ -15,7 +15,9 @@ $ ./get.Lapack
 $ cd ../Mumps  
 $ ./get.Mumps  
 $ cd ../Metis  
-$ ./get.Metis  
+$ ./get.Metis
+$ cd ../ASL
+$ ./get.ASL
    
 $ cd CUSTOM_PATH/Ipopt-3.12.8  
 $ mkdir build  
